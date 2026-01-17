@@ -10,8 +10,8 @@ import Link from "next/link";
 import Logo from "@/assets/svgIcons/Logo.svg"
 
 const navItems = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about", active: true },
+    { label: "Home", href: "/", active: true},
+    { label: "About", href: "/about" },
     { label: "Curriculum", href: "/curriculum" },
     { label: "Campus life", href: "/campus-life" },
     { label: "Contact", href: "/contact" },
@@ -20,7 +20,7 @@ const navItems = [
 const MainAppBar = () => {
     return (
         <AppBar
-            position="static"
+            position="sticky"
             elevation={0}
             sx={{
                 background:
