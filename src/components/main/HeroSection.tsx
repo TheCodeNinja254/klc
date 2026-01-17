@@ -136,12 +136,14 @@ const HeroSection = () => {
               variant="contained"
               size="large"
               sx={{
-                background:
-                  "linear-gradient(172.569deg, rgb(253, 250, 148) 8.442%, rgb(246, 234, 128) 18.399%, rgb(239, 218, 109) 39.846%, rgb(188, 162, 76) 58.994%, rgb(195, 162, 81) 78.909%)",
+                borderRadius: 5,
                 color: "#1F1B62",
                 fontWeight: 700,
                 fontSize: "16px",
                 px: 3,
+                background:
+                  "linear-gradient(172.569deg, rgb(253, 250, 148) 8.442%, rgb(246, 234, 128) 18.399%, rgb(239, 218, 109) 39.846%, rgb(188, 162, 76) 58.994%, rgb(195, 162, 81) 78.909%)",
+
                 "&:hover": {
                   background:
                     "linear-gradient(172.569deg, rgb(253, 250, 148) 0%, rgb(246, 234, 128) 20%, rgb(239, 218, 109) 50%, rgb(188, 162, 76) 70%, rgb(195, 162, 81) 90%)",
@@ -158,6 +160,7 @@ const HeroSection = () => {
                 color: "#1F1B62",
                 fontWeight: 600,
                 fontSize: "16px",
+                borderRadius: 5,
                 px: 3,
                 "&:hover": {
                   bgcolor: "#F5F7F8",

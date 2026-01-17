@@ -184,7 +184,7 @@ const EducationSection = () => {
                     height: "530px",
                     top: "112px",
                     left: 0,
-                    transform: "scaleY(-1)",
+                    transform: "scaleX(-1)",
                   }}
                 >
                   <svg
@@ -203,7 +203,7 @@ const EducationSection = () => {
                     height: "100%",
                     left: "12%",
                     top: 0,
-                    transform: "scaleY(-1)",
+                    // transform: "scaleY(1)",
                   }}
                 >
                   <Image
