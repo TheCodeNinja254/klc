@@ -1,0 +1,95 @@
+import {
+    AppBar,
+    Box,
+    Button,
+    Toolbar,
+    Typography,
+} from "@mui/material";
+import Image from "next/image";
+import Link from "next/link";
+import Logo from "@/assets/svgIcons/Logo.svg"
+
+const navItems = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about", active: true },
+    { label: "Curriculum", href: "/curriculum" },
+    { label: "Campus life", href: "/campus-life" },
+    { label: "Contact", href: "/contact" },
+];
+
+const MainAppBar = () => {
+    return (
+        <AppBar
+            position="static"
+            elevation={0}
+            sx={{
+                background:
+                    "linear-gradient(180deg, #0B1C8F 0%, #0A1470 100%)",
+                boxShadow: "0px 18px 25px rgba(11, 28, 143, 0.35)",
+            }}
+        >
+            <Toolbar sx={{ minHeight: 80, px: 4 }}>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                    <Image
+                        src={Logo}
+                        alt="Konza Learning Centre"
+                        width={80}
+                        height={80}
+                    />
+                </Box>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 1 }} />
+                <Box
+                    sx={{
+                        display: "flex",
+                        gap: 4,
+                        mx: "auto",
+                    }}
+                >
+                    {navItems.map((item) => (
+                        <Link key={item.label} href={item.href}>
+                            <Typography
+                                sx={{
+                                    color: "#FFFFFF",
+                                    fontSize: 14,
+                                    fontWeight: 500,
+                                    position: "relative",
+                                    cursor: "pointer",
+                                    "&::after": item.active
+                                        ? {
+                                            content: '""',
+                                            position: "absolute",
+                                            width: "100%",
+                                            height: "2px",
+                                            backgroundColor: "#FFD700",
+                                            bottom: -6,
+                                            left: 0,
+                                        }
+                                        : {},
+                                }}
+                            >
+                                {item.label}
+                            </Typography>
+                        </Link>
+                    ))}
+                </Box>
+                <Button
+                    sx={{
+                        backgroundColor: "#FFD700",
+                        color: "#0A1470",
+                        fontWeight: 600,
+                        textTransform: "none",
+                        borderRadius: 999,
+                        px: 3,
+                        "&:hover": {
+                            backgroundColor: "#FFCC00",
+                        },
+                    }}
+                >
+                    Book a Tour
+                </Button>
+            </Toolbar>
+        </AppBar>
+    );
+};
+
+export default MainAppBar;
