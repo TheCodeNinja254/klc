@@ -56,7 +56,7 @@ const Footer = () => {
                 maxWidth: "280px",
               }}
             >
-              Nurturing tomorrow's leaders through holistic education and
+              Nurturing tomorrow&#39;s leaders through holistic education and
               character development.
             </Typography>
           </Grid>

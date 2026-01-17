@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Box, Container, Typography, Button, Grid } from "@mui/material";
+import { Box, Container, Typography, Button } from "@mui/material";
 
 const steps = [
   {
