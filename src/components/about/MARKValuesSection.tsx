@@ -75,6 +75,9 @@ const MARKValuesSection = () => {
                   display: "flex",
                   flexDirection: "column",
                   minHeight: { xs: "320px", md: "363px" },
+                  "&:hover": {
+                    transform: "translateY(-4px)",
+                  },
                 }}
               >
                 <Box
