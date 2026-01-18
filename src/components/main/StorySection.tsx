@@ -9,12 +9,12 @@ const StorySection = () => {
     <Box
       sx={{
         position: "relative",
-        py: { xs: 3, md: 4 },
+        py: { xs: 1, md: 2 },
         bgcolor: "#F9FAFB",
         overflow: "hidden",
       }}
     >
-      <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
+      <Container sx={{ position: "relative", zIndex: 2 }}>
         <Box sx={{ position: "relative" }}>
           {/* Top Blue Card - Lifted Above */}
           <Paper

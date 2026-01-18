@@ -106,7 +106,7 @@ const HeroSection = () => {
             variant="h1"
             sx={{
               fontWeight: 700,
-              fontSize: { xs: "32px", md: "44px" },
+              fontSize: { xs: "26px", md: "38px" },
               lineHeight: { xs: "45px", md: "75px" },
               color: "white",
               mb: 2,
@@ -120,7 +120,7 @@ const HeroSection = () => {
           {/* Hero Description */}
           <Typography
             sx={{
-              fontSize: "18px",
+              fontSize: { xs: "12px", md: "14px" },
               lineHeight: "32.5px",
               color: "white",
               mb: 3,

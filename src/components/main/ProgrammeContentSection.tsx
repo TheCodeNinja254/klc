@@ -61,7 +61,7 @@ export default function ProgrammeContentSection() {
                   />
                   <Typography
                     sx={{
-                      fontSize: { xs: "14px", md: "15px", lg: "16px" },
+                      fontSize: { xs: "13px", md: "14px", lg: "15px" },
                       color: "#1F1B62",
                       lineHeight: "24px",
                     }}

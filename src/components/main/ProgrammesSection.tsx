@@ -11,9 +11,10 @@ import {
   useTheme,
 } from "@mui/material";
 import imgEnvato3 from "@/assets/svgIcons/programmes/prog1.svg";
-import imgGemini from "@/assets/svgIcons/programmes/prog1.svg";
-import imgEnvato4 from "@/assets/svgIcons/programmes/prog1.svg";
-import imgAsset25 from "@/assets/svgIcons/programmes/prog1.svg";
+import imgGemini from "@/assets/svgIcons/programmes/prog2.svg";
+import imgEnvato4 from "@/assets/svgIcons/programmes/prog3.svg";
+import imgAsset25 from "@/assets/svgIcons/programmes/prog4.svg";
+import programs from "@/assets/images/main/programs.png";
 
 const programmes = [
   {
@@ -53,36 +54,122 @@ const ProgrammesSection = () => {
         bgcolor: "#F9FAFB",
       }}
     >
-      <Container>
-        <Box sx={{ textAlign: "center", mb: 8 }}>
-          <Typography
-            variant="h2"
-            sx={{
-              fontWeight: 800,
-              fontSize: { xs: "36px", md: "40px" },
-              color: "#1F1B62",
-              mb: 2,
-            }}
-          >
-            Our Programmes
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: { xs: "16px", md: "18px" },
-              color: "#4B5563",
-              maxWidth: "800px",
-              mx: "auto",
-            }}
-          >
-            Tailored learning pathways designed to nurture every child&#39;s
-            unique potential from early years through primary education.
-          </Typography>
-        </Box>
+      {/* Our Programmes Header Section */}
+      <Box
+        sx={{
+          bgcolor: "white",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <Container maxWidth="lg">
+          <Box sx={{ py: { xs: 6, md: 8 } }}>
+            {/* Title */}
+            <Typography
+              variant="h2"
+              sx={{
+                fontSize: { xs: "32px", md: "42px", lg: "48px" },
+                fontWeight: 800,
+                color: "#1F1B62",
+                mb: 2,
+              }}
+            >
+              Our Programmes
+            </Typography>
+            <Box
+              sx={{
+                width: { xs: "120px", md: "150px" },
+                height: { xs: "8px", md: "10px" },
+                bgcolor: "#D7B11F",
+                mb: 4,
+              }}
+            />
 
+            {/* Subtitle */}
+            <Typography
+              sx={{
+                fontSize: { xs: "18px", md: "20px", lg: "22px" },
+                fontWeight: 700,
+                color: "#1F1B62",
+                mb: 3,
+              }}
+            >
+              Where Learning Sparks Curiosity, Confidence, and Character
+            </Typography>
+
+            {/* Description */}
+            <Typography
+              sx={{
+                fontSize: { xs: "15px", md: "16px" },
+                fontWeight: 400,
+                color: "#000",
+                lineHeight: 1.6,
+                mb: 3,
+              }}
+            >
+              Konza Learning Centre offers a warm, play-centered, future-focused
+              early years program designed to nurture the whole child. Our CBC
+              and Cambridge-aligned pathways ensure strong academic foundations
+              while integrating the M.A.R.K ethos — Mindfulness, Ambition,
+              Responsibility, and Kindness — in every aspect of school life.
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: { xs: "12px", md: "14px" },
+                fontWeight: 400,
+                color: "#000",
+                lineHeight: 1.6,
+                mb: 4,
+              }}
+            >
+              Our programs intentionally blend literacy, numeracy, creativity,
+              emotional intelligence, and exploration, helping children grow
+              into confident, joyful, lifelong learners.
+            </Typography>
+          </Box>
+        </Container>
+
+        {/* Hero Image with Gold Background */}
+        <Box
+          sx={{
+            position: "relative",
+            width: "100%",
+            height: { xs: "100px", md: "200px", lg: "200px" },
+            background:
+              "linear-gradient(154.625deg, rgb(253, 250, 148) 8.442%, rgb(246, 234, 128) 18.399%, rgb(239, 218, 109) 39.846%, rgb(188, 162, 76) 58.994%, rgb(195, 162, 81) 78.909%)",
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "right",
+            // overflow: "hidden",
+          }}
+        >
+          <Box
+            sx={{
+              position: "relative",
+              width: "100%",
+              maxWidth: "900px",
+              height: "150%",
+            }}
+          >
+            <Image
+              src={programs}
+              alt="Happy students in KLC uniforms"
+              fill
+              style={{
+                objectFit: "contain",
+                objectPosition: "bottom center",
+              }}
+              priority
+            />
+          </Box>
+        </Box>
+      </Box>
+
+      <Container>
         {/* Programme Cards */}
         <Grid container spacing={4}>
           {programmes.map((programme, index) => (
-            <Grid size={{ xs: 23, sm: 6, md: 3 }} key={index}>
+            <Grid size={{ xs: 12, sm: 6, md: 6 }} key={index}>
               <Box
                 sx={{
                   position: "relative",
@@ -91,7 +178,6 @@ const ProgrammesSection = () => {
                   mt: 10,
                   "&:hover": {
                     transform: "translateY(-12px)",
-                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
                   },
                 }}
               >
@@ -148,7 +234,7 @@ const ProgrammesSection = () => {
 
                   <Typography
                     sx={{
-                      fontSize: "11px",
+                      fontSize: { xs: "12px", md: "14px" },
                       color: "#333",
                     }}
                   >

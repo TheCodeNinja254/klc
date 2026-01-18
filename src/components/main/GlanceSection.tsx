@@ -134,7 +134,7 @@ const GlanceSection = () => {
 
                 <Typography
                   sx={{
-                    fontSize: "16px",
+                    fontSize: { xs: "12px", md: "14px" },
                     color: "white",
                     lineHeight: "24px",
                   }}

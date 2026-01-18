@@ -41,7 +41,7 @@ const JourneySection = () => {
   return (
     <Box
       sx={{
-        py: { xs: 8, md: 12 },
+        py: { xs: 8, md: 3 },
         bgcolor: "white",
       }}
     >

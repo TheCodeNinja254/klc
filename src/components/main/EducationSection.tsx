@@ -146,7 +146,7 @@ const EducationSection = () => {
                       secondary={
                         <Typography
                           sx={{
-                            fontSize: "16px",
+                            fontSize: { xs: "12px", md: "14px" },
                             color: "#0F172A",
                           }}
                         >

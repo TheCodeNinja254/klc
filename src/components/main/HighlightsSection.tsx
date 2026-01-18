@@ -105,7 +105,7 @@ const HighlightsSection = () => {
                 <Typography
                   sx={{
                     fontFamily: "Inter",
-                    fontSize: "15px",
+                    fontSize: { xs: "12px", md: "14px" },
                     color: "white",
                     lineHeight: "normal",
                   }}
