@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import "@/theme/global.css";
 import { MainLayout } from "@/layouts";
+import Providers from "@/utils/providers/Providers";
 
 export const metadata: Metadata = {
   title: "Konza Learning Center",
@@ -9,15 +10,17 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-                                     children,
-                                   }: Readonly<{
+  children,
+}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="en">
+    <html lang="en">
       <body>
-      <MainLayout>{children}</MainLayout>
+        <Providers>
+          <MainLayout>{children}</MainLayout>
+        </Providers>
       </body>
-      </html>
+    </html>
   );
 }

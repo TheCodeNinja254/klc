@@ -29,6 +29,7 @@
   ],
   "rules": {
     "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     "react/prop-types": "off",
     "react/no-danger": 0,
     "react/jsx-uses-react": 0,

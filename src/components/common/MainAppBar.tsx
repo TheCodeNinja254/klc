@@ -1,7 +1,10 @@
+"use client";
+
 import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/assets/svgIcons/Logo.svg";
+import { useBookingModal } from "@/hooks/useBookingModal";
 
 const navItems = [
   { label: "Home", href: "/", active: true },
@@ -12,6 +15,8 @@ const navItems = [
 ];
 
 const MainAppBar = () => {
+  const { setOpen } = useBookingModal();
+
   return (
     <AppBar
       position="sticky"
@@ -66,6 +71,7 @@ const MainAppBar = () => {
           ))}
         </Box>
         <Button
+          onClick={() => setOpen(true)}
           sx={{
             backgroundColor: "#FFD700",
             color: "#0A1470",
