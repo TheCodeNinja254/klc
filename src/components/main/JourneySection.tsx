@@ -1,6 +1,8 @@
 "use client";
+
 import React from "react";
 import { Box, Container, Typography, Button } from "@mui/material";
+import { useBookingModal } from "@/hooks/useBookingModal";
 
 const steps = [
   {
@@ -38,6 +40,8 @@ const steps = [
 ];
 
 const JourneySection = () => {
+  const { setOpen } = useBookingModal();
+
   return (
     <Box
       sx={{
@@ -324,6 +328,7 @@ const JourneySection = () => {
           <Button
             disableElevation
             variant="contained"
+            onClick={() => setOpen(true)}
             size="large"
             sx={{
               borderRadius: 8,

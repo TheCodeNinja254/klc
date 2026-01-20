@@ -1,10 +1,14 @@
 "use client";
+
 import React from "react";
 import { Box, Container, Typography, Button, Chip } from "@mui/material";
 import svgPaths from "@/assets/svgIcons/mainSVGIconPaths";
 import heroBackground from "@/assets/images/heroBackground.png";
+import { useBookingModal } from "@/hooks/useBookingModal";
 
 const HeroSection = () => {
+  const { setOpen } = useBookingModal();
+
   return (
     <Box
       sx={{
@@ -135,6 +139,7 @@ const HeroSection = () => {
             <Button
               variant="contained"
               size="large"
+              onClick={() => setOpen(true)}
               sx={{
                 borderRadius: 5,
                 color: "#1F1B62",
@@ -154,6 +159,7 @@ const HeroSection = () => {
             </Button>
             <Button
               variant="contained"
+              onClick={() => setOpen(true)}
               size="large"
               sx={{
                 bgcolor: "white",

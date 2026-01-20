@@ -5,8 +5,11 @@ import { Box, Container, Typography, Button } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Image from "next/image";
 import heroImage from "@/assets/images/about/aboutHero.png";
+import { useBookingModal } from "@/hooks/useBookingModal";
 
 const AboutHeroSection = () => {
+  const { setOpen } = useBookingModal();
+
   return (
     <Box
       sx={{
@@ -128,6 +131,7 @@ const AboutHeroSection = () => {
 
               <Button
                 variant="contained"
+                onClick={() => setOpen(true)}
                 sx={{
                   background:
                     "linear-gradient(170.668deg, rgb(253, 250, 148) 8.442%, rgb(246, 234, 128) 18.399%, rgb(239, 218, 109) 39.846%, rgb(188, 162, 76) 58.994%, rgb(195, 162, 81) 78.909%)",

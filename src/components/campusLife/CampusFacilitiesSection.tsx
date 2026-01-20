@@ -7,6 +7,7 @@ import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 import Image from "next/image";
 import CheckIcon from "./CheckIcon";
 import facilityImage from "@/assets/images/campusLife/facilities.png";
+import { useBookingModal } from "@/hooks/useBookingModal";
 
 const facilities = [
   "Bright, airy classrooms that promote engagement and focus.",
@@ -16,6 +17,8 @@ const facilities = [
 ];
 
 const CampusFacilitiesSection = () => {
+  const { setOpen } = useBookingModal();
+
   return (
     <Box
       sx={{
@@ -103,6 +106,7 @@ const CampusFacilitiesSection = () => {
               {/* Book Visit Button */}
               <Button
                 variant="contained"
+                onClick={() => setOpen(true)}
                 startIcon={<EventAvailableIcon sx={{ fontSize: 18 }} />}
                 sx={{
                   background: "#C8A658",

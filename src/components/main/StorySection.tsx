@@ -3,8 +3,11 @@
 import React from "react";
 import { Box, Container, Typography, Button, Paper } from "@mui/material";
 import imgSchoolBuilding from "@/assets/images/main/imgSchoolBuilding.png";
+import { useBookingModal } from "@/hooks/useBookingModal";
 
 const StorySection = () => {
+  const { setOpen } = useBookingModal();
+
   return (
     <Box
       sx={{
@@ -111,6 +114,7 @@ const StorySection = () => {
             <Button
               variant="contained"
               size="large"
+              onClick={() => setOpen(true)}
               sx={{
                 position: "relative",
                 zIndex: 2,
