@@ -181,7 +181,7 @@ const EducationSection = () => {
                   sx={{
                     position: "absolute",
                     width: "100%",
-                    height: "530px",
+                    height: { xs: "200px", md: "530px" },
                     top: "112px",
                     left: 0,
                     transform: "scaleX(-1)",
@@ -222,16 +222,18 @@ const EducationSection = () => {
               <Box
                 sx={{
                   position: "relative",
+                  // width: { xs: "150px", md: "341px" },
+                  // height: { xs: "280px", md: "602px" },
                   width: { xs: "150px", md: "341px" },
-                  height: { xs: "280px", md: "602px" },
+                  height: { xs: "300px", md: "602px" },
                 }}
               >
                 <Box
                   sx={{
                     position: "absolute",
                     width: "100%",
-                    height: "530px",
-                    top: "72px",
+                    height: { xs: "200px", md: "530px" },
+                    top: { xs: "110px", md: "72px" },
                     left: 0,
                   }}
                 >

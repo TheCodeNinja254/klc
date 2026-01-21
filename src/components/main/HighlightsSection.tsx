@@ -31,7 +31,7 @@ const HighlightsSection = () => {
   const theme = useTheme();
 
   return (
-    <Container sx={{ marginTop: theme.spacing(4) }}>
+    <Box sx={{ marginTop: theme.spacing(4), px: 5, zIndex: 4 }}>
       <Box
         sx={{
           position: "relative",
@@ -39,7 +39,7 @@ const HighlightsSection = () => {
           mt: { xs: -8, md: -12 },
         }}
       >
-        <Container maxWidth="xl">
+        <Container>
           <Paper
             elevation={0}
             sx={{
@@ -52,6 +52,7 @@ const HighlightsSection = () => {
               gap: { xs: 4, md: 6 },
               justifyContent: "center",
               alignItems: "center",
+              zIndex: 4,
             }}
           >
             {highlights.map((highlight, index) => (
@@ -117,7 +118,7 @@ const HighlightsSection = () => {
           </Paper>
         </Container>
       </Box>
-    </Container>
+    </Box>
   );
 };
 

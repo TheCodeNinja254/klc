@@ -130,8 +130,9 @@ const HeroSection = () => {
               mb: 3,
             }}
           >
-            Inspire your child&apos;s journey with immersive learning
-            environments and joyful moments cultivated by our M.A.R.K values.
+            Inspire your child&apos;s journey with immersive learning <br />
+            environments and joyful moments cultivated by our <br />
+            M.A.R.K values.
           </Typography>
 
           {/* CTA Buttons */}

@@ -1,8 +1,10 @@
 export { default as HighlightsSection } from "./HighlightsSection";
 export { default as HeroSection } from "./HeroSection";
+export { default as MobileHeroSection } from "./MobileHeroSection";
 export { default as EducationSection } from "./EducationSection";
 export { default as GlanceSection } from "./GlanceSection";
 export { default as ProgrammesSection } from "./ProgrammesSection";
 export { default as StorySection } from "./StorySection";
 export { default as JourneySection } from "./JourneySection";
 export { default as ProgrammeContentSection } from "./ProgrammeContentSection";
+export { default as MobileValueCard } from "./MobileValueCard";
