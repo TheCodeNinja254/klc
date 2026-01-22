@@ -64,7 +64,7 @@ const GlanceSection = () => {
             variant="h3"
             sx={{
               fontWeight: 700,
-              fontSize: { xs: "36px", md: "40px" },
+              fontSize: { xs: "28px", md: "40px" },
               color: "#01007B",
               mb: 2,
             }}
@@ -124,7 +124,7 @@ const GlanceSection = () => {
                   variant="h5"
                   sx={{
                     fontWeight: 700,
-                    fontSize: "20px",
+                    fontSize: { xs: "13px", md: "20px" },
                     color: "white",
                     mb: 2,
                   }}
@@ -134,7 +134,7 @@ const GlanceSection = () => {
 
                 <Typography
                   sx={{
-                    fontSize: { xs: "12px", md: "14px" },
+                    fontSize: { xs: "11px", md: "14px" },
                     color: "white",
                     lineHeight: "24px",
                   }}

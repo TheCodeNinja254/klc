@@ -66,8 +66,8 @@ const EducationSection = () => {
                   variant="h2"
                   sx={{
                     fontWeight: 800,
-                    fontSize: { xs: "36px", md: "40px" },
-                    lineHeight: { xs: "44px", md: "40px" },
+                    fontSize: { xs: "28px", md: "40px" },
+                    lineHeight: { xs: "32px", md: "40px" },
                     color: "#1F1B62",
                     mb: 2,
                   }}
@@ -90,7 +90,7 @@ const EducationSection = () => {
                 variant="h4"
                 sx={{
                   fontWeight: 500,
-                  fontSize: { xs: "24px", md: "32px" },
+                  fontSize: { xs: "16px", md: "32px" },
                   lineHeight: "36px",
                   color: "#1F1B62",
                   mb: 4,

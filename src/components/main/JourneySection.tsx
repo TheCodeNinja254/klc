@@ -56,7 +56,7 @@ const JourneySection = () => {
             variant="h2"
             sx={{
               fontWeight: 700,
-              fontSize: { xs: "36px", md: "40px" },
+              fontSize: { xs: "28px", md: "40px" },
               color: "#1F1B62",
               mb: 2,
             }}
