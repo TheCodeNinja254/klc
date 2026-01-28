@@ -15,6 +15,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Logo from "@/assets/svgIcons/Logo.svg";
 import { useBookingModal } from "@/hooks/useBookingModal";
 import Sidebar from "./Sidebar";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { label: "Home", href: "/", active: true },
@@ -27,6 +28,7 @@ const navItems = [
 const MainAppBar = () => {
   const { setOpen } = useBookingModal();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const pathname = usePathname();
 
   const handleToggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -76,17 +78,21 @@ const MainAppBar = () => {
                     fontWeight: 500,
                     position: "relative",
                     cursor: "pointer",
-                    "&::after": item.active
-                      ? {
-                          content: '""',
-                          position: "absolute",
-                          width: "100%",
-                          height: "2px",
-                          backgroundColor: "#FFD700",
-                          bottom: -6,
-                          left: 0,
-                        }
-                      : {},
+                    "&::after":
+                      pathname === item.href
+                        ? {
+                            content: '""',
+                            position: "absolute",
+                            width: "100%",
+                            height: "2px",
+                            backgroundColor: "#FFD700",
+                            bottom: -6,
+                            left: 0,
+                          }
+                        : {},
+                    "&:hover": {
+                      color: "#FFD700",
+                    },
                   }}
                 >
                   {item.label}

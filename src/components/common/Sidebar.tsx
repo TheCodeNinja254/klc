@@ -14,6 +14,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import Link from "next/link";
 import React from "react";
 import { useBookingModal } from "@/hooks/useBookingModal";
+import { usePathname } from "next/navigation";
 
 interface NavItem {
   label: string;
@@ -29,6 +30,7 @@ interface SidebarProps {
 
 const Sidebar = ({ open, onClose, navItems }: SidebarProps) => {
   const { setOpen } = useBookingModal();
+  const pathname = usePathname();
 
   const handleBookingClick = () => {
     setOpen(true);
@@ -100,17 +102,18 @@ const Sidebar = ({ open, onClose, navItems }: SidebarProps) => {
                           fontSize: 16,
                           fontWeight: item.active ? 600 : 500,
                           position: "relative",
-                          "&::after": item.active
-                            ? {
-                                content: '""',
-                                position: "absolute",
-                                width: "4px",
-                                height: "100%",
-                                backgroundColor: "#FFD700",
-                                left: -16,
-                                top: 0,
-                              }
-                            : {},
+                          "&::after":
+                            pathname === item.href
+                              ? {
+                                  content: '""',
+                                  position: "absolute",
+                                  width: "4px",
+                                  height: "100%",
+                                  backgroundColor: "#FFD700",
+                                  left: -16,
+                                  top: 0,
+                                }
+                              : {},
                         },
                       },
                     }}
